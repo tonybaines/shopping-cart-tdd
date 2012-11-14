@@ -2,7 +2,7 @@ package com.bt.tdd.shoppingcart;
 
 public class UserInterface {
 	
-	private static final String[] PRODUCTS = {"", "Fork Handles @ £11.99", "Candles @ £3.99", "Hoes @ £29.99"};
+	private static final Product[] PRODUCTS = {Product.NULL, new Product("Fork Handles", 11.99), new Product("Candles", 3.99), new Product("Hoes", 29.99)};
 
 	private static final String PRODUCT_LIST = String.format("[1] %s\n[2] %s\n[3] %s\n", PRODUCTS[1], PRODUCTS[2], PRODUCTS[3]);
 	
