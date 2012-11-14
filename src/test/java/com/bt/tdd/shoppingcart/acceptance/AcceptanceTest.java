@@ -32,6 +32,7 @@ public class AcceptanceTest {
 		assertThat(ui.getOutput(),
 				containsString("L: List the Available Products"));
 		ui.sendInput("L");
+		assertTrue("UI is not active!", ui.isActive());
 		assertThat(
 				ui.getOutput(),
 				allOf(containsString("[1] Fork Handles £11.99"),
@@ -43,6 +44,6 @@ public class AcceptanceTest {
 
 	protected void quit() {
 		ui.sendInput("Q");
-		assertThat(ui.isActive(), is(false));
+		assertFalse("UI is still active!", ui.isActive());
 	}
 }
