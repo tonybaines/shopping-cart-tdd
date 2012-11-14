@@ -13,17 +13,12 @@ public class UIRunner {
 	public static void main(String[] args) {
 		try {
 			UserInterface ui = new UserInterface();
-			TextDevice console = (System.console() == null) ? streamDevice(
-					System.in, System.out)
+			TextDevice console = (System.console() == null) ? streamDevice(System.in, System.out)
 					: new ConsoleDevice(System.console());
 
-			System.out.print(ui.getOutput());
-
 			while (ui.isActive()) {
-
-				String input;
-				input = console.readLine("What do you want to do next?: ");
-
+				System.out.print(ui.getOutput());
+				String input = console.readLine("\n? ");
 				ui.sendInput(input);
 			}
 		} catch (IOException e) {

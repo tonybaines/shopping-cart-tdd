@@ -49,7 +49,7 @@ public class AcceptanceTest {
 
 		assertThat(
 				ui.getOutput(),
-				containsString("enter the number of an item to add to your basket"));
+				containsString("enter the number"));
 		ui.sendInput("2");
 
 		assertThat(
