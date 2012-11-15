@@ -4,7 +4,7 @@ import com.bt.tdd.shoppingcart.Product;
 
 public abstract class CustomerSessionState {
 	private static final Product[] PRODUCTS = {Product.NULL, new Product("Fork Handles", 11.99), new Product("Candles", 3.99), new Product("Hoes", 29.99)};
-	private static final StringBuffer basket = new StringBuffer("Your Basket\n");
+	private static final Basket basket = new Basket();
 	
 	public static class Quit extends CustomerSessionState {}
 	
@@ -64,7 +64,7 @@ public abstract class CustomerSessionState {
 		@Override 
 		public void notify(String input) {
 			int idOfProductToAdd = Integer.parseInt(input);
-			basket.append(String.format("1 x %s\n", PRODUCTS[idOfProductToAdd]));
+			basket.add(PRODUCTS[idOfProductToAdd]);
 		}
 
 		@Override
