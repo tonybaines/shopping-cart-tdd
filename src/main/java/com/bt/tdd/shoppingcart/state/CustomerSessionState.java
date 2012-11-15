@@ -35,7 +35,9 @@ public abstract class CustomerSessionState {
 		public String getPrompt() {
 			return "Welcome to The Shop In The Clouds\n"
 					+ "Your options are\n" + "Q: Quit\n"
-					+ "L: List the Available Products\n" + "C: Choose a Product\n"
+					+ "L: List the Available Products\n" 
+					+ "C: Choose a Product\n"
+					+ "R: Remove an item from your basket\n"
 					+ basket;
 		}
 		
