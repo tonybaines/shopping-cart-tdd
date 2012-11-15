@@ -22,7 +22,8 @@ public class AcceptanceTest {
 				.expectingThatTheOutput(
 						containsString("[1] Fork Handles @ £11.99"),
 						containsString("[2] Candles @ £3.99"),
-						containsString("[3] Hoes @ £29.99")).quit();
+						containsString("[3] Hoes @ £29.99"))
+				.quit();
 	}
 
 	@Test
@@ -30,7 +31,8 @@ public class AcceptanceTest {
 		aNewUI().selectOption("C", "Choose a Product")
 				.selectItemNumber("2")
 				.expectingThatTheOutput(containsString("Your Basket"),
-						containsString("1 x Candles @ £3.99")).quit();
+						containsString("1 x Candles @ £3.99"))
+				.quit();
 	}
 
 	@Test
@@ -43,6 +45,7 @@ public class AcceptanceTest {
 				.selectItemNumber("2")
 				.expectingThatTheOutput(containsString("Your Basket"),
 						not(containsString("1 x Candles @ £3.99")),
-						containsString("Empty")).quit();
+						containsString("Empty"))
+				.quit();
 	}
 }

@@ -1,10 +1,11 @@
 package com.bt.tdd.shoppingcart;
 
 import com.bt.tdd.shoppingcart.state.CustomerSessionState;
+import com.bt.tdd.shoppingcart.state.PromptForAction;
 
 public class UserInterface {
 
-	private CustomerSessionState currentState = new CustomerSessionState.PromptForAction();
+	private CustomerSessionState currentState = new PromptForAction();
 
 	public void sendInput(String input) {
 		currentState.notify(input);
