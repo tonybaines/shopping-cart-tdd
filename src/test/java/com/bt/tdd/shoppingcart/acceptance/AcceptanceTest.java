@@ -4,6 +4,7 @@ import static com.bt.tdd.shoppingcart.acceptance.AcceptanceTestFixture.aNewUI;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.not;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class AcceptanceTest {
@@ -28,17 +29,27 @@ public class AcceptanceTest {
 
 	@Test
 	public void allowsTheUserToAddAnItemToTheirBasket() {
-		aNewUI().selectOption("C", "Choose a Product")
-				.selectItemNumber("2")
+		aNewUI().addProduct("2")
 				.expectingThatTheOutput(containsString("Your Basket"),
 						containsString("1 x Candles @ £3.99"))
+				.quit();
+	}
+	
+	@Ignore @Test 
+	public void addingTheSameProductToTheBasketTwiceShowsTheMultiple() {
+
+		aNewUI().addProduct("2")
+				.addProduct("1")
+				.addProduct("2")
+				.expectingThatTheOutput(containsString("Your Basket"),
+						containsString("2 x Candles @ £3.99"),
+						containsString("1 x Fork Handles @ £11.99"))
 				.quit();
 	}
 
 	@Test
 	public void allowsTheUserToRemoveAnItemFromTheirBasket() {
-		aNewUI().selectOption("C", "Choose a Product")
-				.selectItemNumber("2")
+		aNewUI().addProduct("2")
 				.expectingThatTheOutput(containsString("Your Basket"),
 						containsString("1 x Candles @ £3.99"))
 				.selectOption("R", "Remove an item from your basket")
@@ -48,4 +59,5 @@ public class AcceptanceTest {
 						containsString("Empty"))
 				.quit();
 	}
+	
 }

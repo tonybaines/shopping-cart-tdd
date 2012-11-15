@@ -6,6 +6,8 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
+import com.bt.tdd.shoppingcart.Products;
+
 
 public class PromptForActionTest {
 
@@ -36,6 +38,13 @@ public class PromptForActionTest {
 	}
 
 	@Test
+	public void shouldTransitionToTheRemoveItemStateWhenNotifiedWithQ() {
+		CustomerSessionState state = getState();
+		state.notify("R");
+		assertThat(state.nextState(), instanceOf(RemoveItem.class));
+	}
+
+	@Test
 	public void shouldTransitionToItselfWhenNotifiedWithAnUnknownOption() {
 		CustomerSessionState state = getState();
 		state.notify("X");
@@ -57,7 +66,7 @@ public class PromptForActionTest {
 	}
 
 	protected CustomerSessionState getState() {
-		return new PromptForAction();
+		return new PromptForAction(new Products());
 	}
 
 }

@@ -7,12 +7,14 @@ import static org.junit.Assert.assertThat;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.bt.tdd.shoppingcart.Products;
+
 
 public class QuitTest {
 	private CustomerSessionState state;
 	@Before
 	public void setup() {
-		state = new Quit();		
+		state = new Quit(new Products());		
 	}
 
 

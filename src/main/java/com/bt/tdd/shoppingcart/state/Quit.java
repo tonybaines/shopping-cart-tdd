@@ -1,3 +1,14 @@
 package com.bt.tdd.shoppingcart.state;
 
-public class Quit extends CustomerSessionState {}
+import com.bt.tdd.shoppingcart.Products;
+
+public class Quit extends CustomerSessionState {
+
+	public Quit(Products products) {
+		super(products);
+	}
+
+	protected Quit(CustomerSessionState other) {
+		super(other);
+	}
+}

@@ -1,20 +1,35 @@
 package com.bt.tdd.shoppingcart.state;
 
+import com.bt.tdd.shoppingcart.Products;
+
 
 public class PromptForAction extends CustomerSessionState {
+
 	private CustomerSessionState nextState = this;
 
+	public PromptForAction(Products products) {
+		super(products);
+	}
+	
+	public PromptForAction(CustomerSessionState other) {
+		super(other);
+	}
+	
+	// TODO: Pull out a factory for states (enum?) and have them describe themselves
 	@Override 
 	public void notify(String input) {
 		switch (sanitise(input)) {
 		case 'Q':
-			this.nextState = new Quit();
+			this.nextState = new Quit(this);
 			break;
 		case 'L':
-			this.nextState = new ListProducts();
+			this.nextState = new ListProducts(this);
 			break;
 		case 'C':
-			nextState = new ChooseProduct();
+			nextState = new ChooseProduct(this);
+			break;
+		case 'R':
+			nextState = new RemoveItem(this);
 			break;
 		default:
 			break;

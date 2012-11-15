@@ -7,13 +7,18 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.bt.tdd.shoppingcart.Product;
+import com.bt.tdd.shoppingcart.Products;
+
 
 public class ChooseProductTest {
 	private CustomerSessionState state;
 
 	@Before
 	public void setUp() {
-		state = new ChooseProduct();
+		state = new ChooseProduct(new Products(){{
+			put(1, new Product("TEST-PRODUCT", 1.00));
+		}});
 	}
 
 	@Test
@@ -23,12 +28,20 @@ public class ChooseProductTest {
 
 	@Test
 	public void shouldTransitionToThePromptForActionState() {
+		state.notify("1");
 		assertThat(state.nextState(), instanceOf(PromptForAction.class));
 	}
 
 	@Test
 	public void shouldTransitionToItselfWhenGivenAnInvalidNumber() {
-		assertThat(state.nextState(), instanceOf(PromptForAction.class));
+		state.notify("0");
+		assertThat(state.nextState(), instanceOf(ChooseProduct.class));
+	}
+
+	@Test
+	public void shouldTransitionToItselfWhenGivenAnEmptyNumber() {
+		state.notify("");
+		assertThat(state.nextState(), instanceOf(ChooseProduct.class));
 	}
 
 }

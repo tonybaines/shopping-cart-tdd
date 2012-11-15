@@ -37,6 +37,10 @@ public class AcceptanceTestFixture {
 		return this;
 	}
 	
+	public AcceptanceTestFixture addProduct(String itemCode) {
+		return selectOption("C", "Choose a Product").selectItemNumber(itemCode);
+	}
+	
 	public AcceptanceTestFixture selectOption(String option, String message) {
 		assertThat(ui.getOutput(), allOf(containsString(option+":"), containsString(message)));
 		ui.sendInput(option);
