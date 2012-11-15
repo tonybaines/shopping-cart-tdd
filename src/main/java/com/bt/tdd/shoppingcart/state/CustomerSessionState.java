@@ -1,5 +1,6 @@
 package com.bt.tdd.shoppingcart.state;
 
+import com.bt.tdd.shoppingcart.Basket;
 import com.bt.tdd.shoppingcart.Product;
 
 public abstract class CustomerSessionState {

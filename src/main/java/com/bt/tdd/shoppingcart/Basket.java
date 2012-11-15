@@ -1,8 +1,7 @@
-package com.bt.tdd.shoppingcart.state;
+package com.bt.tdd.shoppingcart;
 
 import java.util.ArrayList;
 
-import com.bt.tdd.shoppingcart.Product;
 
 public class Basket extends ArrayList<Product> {
 

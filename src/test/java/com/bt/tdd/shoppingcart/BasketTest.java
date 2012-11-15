@@ -1,10 +1,11 @@
-package com.bt.tdd.shoppingcart.state;
+package com.bt.tdd.shoppingcart;
 
 import static org.junit.Assert.*;
 import static org.hamcrest.Matchers.*;
 
 import org.junit.Test;
 
+import com.bt.tdd.shoppingcart.Basket;
 import com.bt.tdd.shoppingcart.Product;
 
 public class BasketTest {
