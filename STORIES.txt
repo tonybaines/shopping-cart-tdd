@@ -6,7 +6,7 @@ Scenario: A command-line application for buying products from an online retailer
 Stories
 -------
 As a...
-
+----- ALREADY COMPLETE -----
 1.   CUSTOMER I want to ask for a list of products
         so I can choose what I want to buy
 
@@ -16,6 +16,7 @@ As a...
 3.   CUSTOMER I want to be able to remove a product from my basket
         so that I can change my mind
 
+----- START HERE ------
 4.   CUSTOMER I want to be able to see the total cost of the products in my basket
         so that I can change my mind
 
