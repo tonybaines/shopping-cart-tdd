@@ -12,9 +12,17 @@ public class Basket extends ArrayList<Product> {
 			items.append("Empty\n");
 		} else {
 			for (Product item : this) {
-				items.append(String.format("1 x %s\n", item));
+				items.append(String.format("%d x %s\n", countOf(item), item));
 			}
 		}
 		return items.toString();
+	}
+
+	private int countOf(Product item) {
+		int count = 0;
+		for(Product basketItem : this) {
+			if (basketItem.equals(item)) count++;
+		}
+		return count;
 	}
 }
