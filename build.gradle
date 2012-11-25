@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+repositories {
+	flatDir name: 'localRepository', dirs: 'lib'
+//	mavenRepo url: "https://collaborate.bt.com/artefacts/content/groups/public"
+//	mavenCentral()
+}
+
+dependencies {
+	testCompile(['junit:junit:4.10', 
+				 'org.jmock:jmock-junit4:2.5.1',
+                 'org.hamcrest:hamcrest-all:1.1',
+				])
+}
+
+// Handy task to capture all project libs for offline use
+task copyToLib(type: Copy) {
+	into "lib"
+	from configurations.testRuntime
+}

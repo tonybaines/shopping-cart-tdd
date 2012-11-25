@@ -505,6 +505,756 @@
 <node TEXT="Strategy pattern" ID="ID_255236191" CREATED="1352306572517" MODIFIED="1352306576536"/>
 </node>
 </node>
+<node TEXT="http://blog.james-carr.org/2006/11/03/tdd-anti-patterns/" ID="ID_278878176" CREATED="1353658460057" MODIFIED="1353658474417">
+<node ID="ID_1405535251" CREATED="1353658508853" MODIFIED="1353658508853"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dt>
+        The Liar
+      </dt>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+<node ID="ID_1478662560" CREATED="1353658508869" MODIFIED="1353658508869"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dd>
+        An entire unit test that passes all of the test cases it has and appears valid, but upon closer inspection it is discovered that it doesn&#8217;t really test the intended target at all.
+      </dd>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
+<node ID="ID_973090255" CREATED="1353658508869" MODIFIED="1353658508869"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dt>
+        Excessive Setup
+      </dt>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+<node ID="ID_592925895" CREATED="1353658508869" MODIFIED="1353658508869"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dd>
+        A test that requires a lot of work setting up in order to even begin testing. Sometimes several hundred lines of code is used to setup the environment for one test, with several objects involved, which can make it difficult to really ascertain what is tested due to the &#8220;noise&#8221; of all of the setup going on.
+      </dd>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
+<node ID="ID_607596112" CREATED="1353658508869" MODIFIED="1353658508869"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dt>
+        The Giant
+      </dt>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+<node ID="ID_1304200602" CREATED="1353658508869" MODIFIED="1353658508869" LINK="http://en.wikipedia.org/wiki/God_object"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dd>
+        A unit test that, although it is validly testing the object under test, can span thousands of lines and contain many many test cases. This can be an indicator that the system under tests is a <a href="http://en.wikipedia.org/wiki/God_object">God Object</a>
+      </dd>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
+<node ID="ID_1790059645" CREATED="1353658508885" MODIFIED="1353658508885"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dt>
+        The Mockery
+      </dt>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+<node ID="ID_1275621355" CREATED="1353658508885" MODIFIED="1353658508885"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dd>
+        Sometimes mocking can be good, and handy. But sometimes developers can lose themselves and in their effort to mock out what isn&#8217;t being tested. In this case, a unit test contains so many mocks, stubs, and/or fakes that the system under test isn&#8217;t even being tested at all, instead data returned from mocks is what is being tested.
+      </dd>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
+<node ID="ID_1835020192" CREATED="1353658508885" MODIFIED="1353658508885"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dt>
+        The Inspector
+      </dt>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+<node ID="ID_1367670238" CREATED="1353658508900" MODIFIED="1353658508900"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dd>
+        A unit test that violates encapsulation in an effort to achieve 100% code coverage, but knows so much about what is going on in the object that any attempt to refactor will break the existing test and require any change to be reflected in the unit test.
+      </dd>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
+<node ID="ID_234039972" CREATED="1353658508900" MODIFIED="1353658508900" LINK="http://blog.james-carr.org/2006/11/03/tdd-anti-patterns/#joakim"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dt>
+        Generous Leftovers <a href="http://blog.james-carr.org/2006/11/03/tdd-anti-patterns/#joakim"><sup>[4]</sup></a>
+      </dt>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+<node ID="ID_1922345231" CREATED="1353658508900" MODIFIED="1353658508900"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dd>
+        An instance where one unit test creates data that is persisted somewhere, and another test reuses the data for its own devious purposes. If the &#8220;generator&#8221; is ran afterward, or not at all, the test using that data will outright fail.
+      </dd>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
+<node ID="ID_940013587" CREATED="1353658508900" MODIFIED="1353658508900" LINK="http://blog.james-carr.org/2006/11/03/tdd-anti-patterns/#frank"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dt>
+        The Local Hero <a href="http://blog.james-carr.org/2006/11/03/tdd-anti-patterns/#frank"><sup>[1]</sup></a>
+      </dt>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+<node ID="ID_1587601043" CREATED="1353658508916" MODIFIED="1353658508916"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dd>
+        A test case that is dependent on something specific to the development environment it was written on in order to run. The result is the test passes on development boxes, but fails when someone attempts to run it elsewhere.
+      </dd>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
+<node ID="ID_1005209802" CREATED="1353658508916" MODIFIED="1353658508916" LINK="http://blog.james-carr.org/2006/11/03/tdd-anti-patterns/#frank"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dt>
+        The Nitpicker <a href="http://blog.james-carr.org/2006/11/03/tdd-anti-patterns/#frank"><sup>[1]</sup></a>
+      </dt>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+<node ID="ID_213892140" CREATED="1353658508916" MODIFIED="1353658508916"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dd>
+        A unit test which compares a complete output when it&#8217;s really only interested in small parts of it, so the test has to continually be kept in line with otherwise unimportant details. Endemic in web application testing.
+      </dd>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
+<node ID="ID_805028915" CREATED="1353658508931" MODIFIED="1353658508931" LINK="http://blog.james-carr.org/2006/11/03/tdd-anti-patterns/#frank"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dt>
+        The Secret Catcher<a href="http://blog.james-carr.org/2006/11/03/tdd-anti-patterns/#frank"><sup>[1]</sup></a>
+      </dt>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+<node ID="ID_1189468064" CREATED="1353658508931" MODIFIED="1353658508931"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dd>
+        A test that at first glance appears to be doing no testing due to the absence of assertions, but as they say, &#8220;the devil&#8217;s in the details.&#8221; The test is really relying on an exception to be thrown when a mishap occurs, and is expecting the testing framework to capture the exception and report it to the user as a failure.
+      </dd>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
+<node ID="ID_1028608017" CREATED="1353658508931" MODIFIED="1353658508931" LINK="http://blog.james-carr.org/2006/11/03/tdd-anti-patterns/#frank"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dt>
+        The Dodger <a href="http://blog.james-carr.org/2006/11/03/tdd-anti-patterns/#frank"><sup>[1]</sup></a>
+      </dt>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+<node ID="ID_1468005903" CREATED="1353658508947" MODIFIED="1353658508947"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dd>
+        A unit test which has lots of tests for minor (and presumably easy to test) side effects, but never tests the core desired behavior. Sometimes you may find this in database access related tests, where a method is called, then the test selects from the database and runs assertions against the result.
+      </dd>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
+<node ID="ID_72413696" CREATED="1353658508947" MODIFIED="1353658508947" LINK="http://blog.james-carr.org/2006/11/03/tdd-anti-patterns/#frank"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dt>
+        The Loudmouth <a href="http://blog.james-carr.org/2006/11/03/tdd-anti-patterns/#frank"><sup>[1]</sup></a>
+      </dt>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+<node ID="ID_1862851132" CREATED="1353658508947" MODIFIED="1353658508947"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dd>
+        A unit test (or test suite) that clutters up the console with diagnostic messages, logging messages, and other miscellaneous chatter, even when tests are passing. Sometimes during test creation there was a desire to manually see output, but even though it&#8217;s no longer needed, it was left behind.
+      </dd>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
+<node ID="ID_860327390" CREATED="1353658508947" MODIFIED="1353658508947" LINK="http://blog.james-carr.org/2006/11/03/tdd-anti-patterns/#frank"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dt>
+        The Greedy Catcher <a href="http://blog.james-carr.org/2006/11/03/tdd-anti-patterns/#frank"><sup>[1]</sup></a>
+      </dt>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+<node ID="ID_222245375" CREATED="1353658508963" MODIFIED="1353658508963"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dd>
+        A unit test which catches exceptions and swallows the stack trace, sometimes replacing it with a less informative failure message, but sometimes even just logging (c.f. Loudmouth) and letting the test pass.
+      </dd>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
+<node ID="ID_785284320" CREATED="1353658508963" MODIFIED="1353658508963" LINK="http://blog.james-carr.org/2006/11/03/tdd-anti-patterns/#frank"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dt>
+        The Sequencer <a href="http://blog.james-carr.org/2006/11/03/tdd-anti-patterns/#frank"><sup>[1]</sup></a>
+      </dt>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+<node ID="ID_470907357" CREATED="1353658508978" MODIFIED="1353658508978"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dd>
+        A unit test that depends on items in an unordered list appearing in the same order during assertions.
+      </dd>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
+<node ID="ID_510224913" CREATED="1353658508978" MODIFIED="1353658508978"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dt>
+        Hidden Dependency
+      </dt>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+<node ID="ID_1672953702" CREATED="1353658508978" MODIFIED="1353658508978"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dd>
+        A close cousin of The Local Hero, a unit test that requires some existing data to have been populated somewhere before the test runs. If that data wasn&#8217;t populated, the test will fail and leave little indication to the developer what it wanted, or why&#8230; forcing them to dig through acres of code to find out where the data it was using was supposed to come from.
+      </dd>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
+<node ID="ID_1044681217" CREATED="1353658508994" MODIFIED="1353658508994" LINK="http://blog.james-carr.org/2006/11/03/tdd-anti-patterns/#tim"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dt>
+        The Enumerator <a href="http://blog.james-carr.org/2006/11/03/tdd-anti-patterns/#tim"><sup>[2]</sup></a>
+      </dt>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+<node ID="ID_1256953257" CREATED="1353658508994" MODIFIED="1353658508994"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dd>
+        A unit test with each test case method name is only an enumeration, i.e. test1, test2, test3. As a result, the intention of the test case is unclear, and the only way to be sure is to read the test case code and pray for clarity.
+      </dd>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
+<node ID="ID_993651111" CREATED="1353658508994" MODIFIED="1353658508994"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dt>
+        The Stranger
+      </dt>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+<node ID="ID_305523345" CREATED="1353658509010" MODIFIED="1353658509010" LINK="http://blog.james-carr.org/2006/11/03/tdd-anti-patterns/#kelly"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dd>
+        A test case that doesn&#8217;t even belong in the unit test it is part of. it&#8217;s really testing a separate object, most likely an object that is used by the object under test, but the test case has gone and tested that object directly without relying on the output from the object under test making use of that object for its own behavior. Also known as <strong>TheDistantRelative</strong><a href="http://blog.james-carr.org/2006/11/03/tdd-anti-patterns/#kelly"><sup>[5]</sup></a>.
+      </dd>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
+<node ID="ID_1892733829" CREATED="1353658509010" MODIFIED="1353658509010" LINK="http://blog.james-carr.org/2006/11/03/tdd-anti-patterns/#cory"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dt>
+        The Operating System Evangelist <a href="http://blog.james-carr.org/2006/11/03/tdd-anti-patterns/#cory"><sup>[3]</sup></a>
+      </dt>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+<node ID="ID_1965383872" CREATED="1353658509010" MODIFIED="1353658509010"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dd>
+        A unit test that relies on a specific operation system environment to be in place in order to work. A good example would be a test case that uses the newline sequence for windows in an assertion, only to break when ran on Linux.
+      </dd>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
+<node ID="ID_1388360249" CREATED="1353658509010" MODIFIED="1353658509010" LINK="http://blog.james-carr.org/2006/11/03/tdd-anti-patterns/#tim"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dt>
+        Success Against All Odds <a href="http://blog.james-carr.org/2006/11/03/tdd-anti-patterns/#tim"><sup>[2]</sup></a>
+      </dt>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+<node ID="ID_329326339" CREATED="1353658509025" MODIFIED="1353658509025"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dd>
+        A test that was written pass first rather than fail first. As an unfortunate side effect, the test case happens to always pass even though the test should fail.
+      </dd>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
+<node ID="ID_1098308827" CREATED="1353658509025" MODIFIED="1353658509025"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dt>
+        The Free Ride
+      </dt>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+<node ID="ID_167871387" CREATED="1353658509025" MODIFIED="1353658509025"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dd>
+        Rather than write a new test case method to test another feature or functionality, a new assertion rides along in an existing test case.
+      </dd>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
+<node ID="ID_1036993910" CREATED="1353658509041" MODIFIED="1353658509041"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dt>
+        The One
+      </dt>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+<node ID="ID_1148418601" CREATED="1353658509041" MODIFIED="1353658509041"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dd>
+        A combination of several patterns, particularly <strong>TheFreeRide</strong> and <strong>TheGiant</strong>, a unit test that contains only one test method which tests the entire set of functionality an object has. A common indicator is that the test method is often the same as the unit test name, and contains multiple lines of setup and assertions.
+      </dd>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
+<node ID="ID_663063359" CREATED="1353658509041" MODIFIED="1353658509041"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dt>
+        The Peeping Tom
+      </dt>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+<node ID="ID_1929931173" CREATED="1353658509056" MODIFIED="1353658509056"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dd>
+        A test that, due to shared resources, can see the result data of another test, and may cause the test to fail even though the system under test is perfectly valid. This has been seen commonly in fitnesse, where the use of static member variables to hold collections aren&#8217;t properly cleaned after test execution, often popping up unexpectedly in other test runs. Also known as <strong>TheUninvitedGuests</strong>
+      </dd>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
+<node ID="ID_323272559" CREATED="1353658509056" MODIFIED="1353658509056"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dt>
+        The Slow Poke
+      </dt>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+<node ID="ID_804168933" CREATED="1353658509056" MODIFIED="1353658509056"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <dl>
+      <dd>
+        A unit test that runs incredibly slow. When developers kick it off, they have time to go to the bathroom, grab a smoke, or worse, kick the test off before they go home at the end of the day.
+      </dd>
+    </dl>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
+</node>
 </node>
 <node TEXT="Compared to" POSITION="left" ID="ID_445901163" CREATED="1353315175359" MODIFIED="1353326497581">
 <font SIZE="12" BOLD="true"/>
