@@ -1,6 +1,8 @@
 .settings/
 /.gradle
 /build
+/nbproject/private/build.xml
 bin
+nbproject/
 target
 ~*

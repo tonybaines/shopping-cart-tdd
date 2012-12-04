@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER" exported="true"/>
-	<classpathentry kind="output" path="bin"/>
 	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry kind="src" path="src/test/java"/>
-	<classpathentry kind="lib" path="C:/Users/802661379/workspace/shopping-cart-tdd/lib/junit-4.10.jar" exported="true"/>
-	<classpathentry kind="lib" path="C:/Users/802661379/workspace/shopping-cart-tdd/lib/jmock-junit4-2.5.1.jar" exported="true"/>
-	<classpathentry kind="lib" path="C:/Users/802661379/workspace/shopping-cart-tdd/lib/hamcrest-all-1.1.jar" exported="true"/>
+	<classpathentry kind="output" path="bin"/>
+	<classpathentry kind="lib" path="C:/Users/802661379/workspace/tdd-workshop/shopping-cart-tdd/lib/junit-4.10.jar" exported="true"/>
+	<classpathentry kind="lib" path="C:/Users/802661379/workspace/tdd-workshop/shopping-cart-tdd/lib/jmock-junit4-2.5.1.jar" exported="true"/>
+	<classpathentry kind="lib" path="C:/Users/802661379/workspace/tdd-workshop/shopping-cart-tdd/lib/jmock-2.5.1.jar" exported="true"/>
+	<classpathentry kind="lib" path="C:/Users/802661379/workspace/tdd-workshop/shopping-cart-tdd/lib/hamcrest-all-1.1.jar" exported="true"/>
 </classpath>
